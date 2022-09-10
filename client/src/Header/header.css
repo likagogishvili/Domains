@@ -1,0 +1,49 @@
+.headerFirstContainer {
+  height: 80px;
+  box-shadow: 0px 3px 6px #00000005;
+}
+.headerSecondContaner {
+  height: 60px;
+  display: flex;
+  box-shadow: 0px 3px 6px #00000005;
+  border-top: 1px solid #f1f1f5;
+}
+.headerFChilds {
+  width: 80%;
+  height: 100%;
+}
+
+.iconBoxes {
+  background: #ffffff;
+  border: 1px solid #f1f1f5;
+  border-radius: 12px;
+  opacity: 1;
+  width: 48px;
+  display: flex;
+}
+.iconBoxes2 {
+  background: #ffffff;
+  border: 1px solid #f1f1f5;
+  border-radius: 12px;
+  opacity: 1;
+  width: 160px;
+}
+
+.userName {
+  text-align: left;
+  font: normal normal normal 14px/20px TKT;
+  letter-spacing: 0px;
+  width: 50%;
+  color: #696974;
+  opacity: 1;
+}
+.headerFChilds > a {
+  font: normal normal medium 14px/40px TKT;
+  letter-spacing: 0px;
+  color: #696974;
+  opacity: 1;
+  text-decoration: none;
+}
+.row {
+  --bs-gutter-x: 0rem !important;
+}

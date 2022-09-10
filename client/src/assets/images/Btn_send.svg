@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="Btn_send" transform="translate(-1.227 -2)">
+    <rect id="Rectangle" width="36" height="36" rx="10" transform="translate(1.227 2)" fill="#f5f5f8"/>
+    <path id="Shape" d="M5,3.821,8.577.244A.833.833,0,0,1,9.756,1.423L5.589,5.589a.833.833,0,0,1-1.179,0L.244,1.423A.833.833,0,0,1,1.423.244Z" transform="translate(14.227 18.083)" fill="#696974"/>
+  </g>
+</svg>

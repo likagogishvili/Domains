@@ -1,0 +1,23 @@
+.greyHeadings {
+  font: normal normal normal 14px/40px TKT;
+  letter-spacing: 0px;
+  color: #92929d;
+}
+.greenText {
+  font: normal normal normal 14px/40px TKT;
+  color: #99cc66;
+}
+.boldHeading {
+  font: normal normal bold 14px/40px TKT;
+  letter-spacing: 0px;
+  color: #171725;
+  opacity: 1;
+}
+.lastHeading {
+  text-align: left;
+  text-decoration: underline;
+  font: normal normal normal 14px/40px TKT;
+  letter-spacing: 0px;
+  color: #171725;
+  opacity: 1;
+}
