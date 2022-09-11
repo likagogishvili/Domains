@@ -1,5 +1,5 @@
 import accept from "./images/accept.svg";
-import arrowDown from "./images/arrowDown.svg";
+import arrowDown from "./images/arrowDown.png";
 import arrowDownGreen from "./images/arrowDownGreen.svg";
 import bell from "./images/bell.svg";
 import Btn_send from "./images/Btn_send.svg";
@@ -11,6 +11,10 @@ import coverPicture from "./images/coverPicture.png";
 import logoText from "./images/logoText.svg";
 import notFound from "./images/notFound.svg";
 import person from "./images/person.svg";
+import lariIcon from './images/lariIcon.png'
+import greenLines from './images/greenLines.png'
+import greenCard from './images/greenCard.png'
+
 
 
 export {
@@ -26,5 +30,8 @@ export {
   coverPicture,
   logoText,
   notFound,
-  person
+  person,
+  lariIcon,
+  greenLines,
+  greenCard
 };

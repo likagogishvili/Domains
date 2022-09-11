@@ -1,11 +1,13 @@
 import "./mainContent.css";
 import * as images from "../assets/Images";
+import Filters from "./Filters";
+import Content from "./Content";
 
 function MainContent() {
   return (
     <div className=" m-auto" style={{ width: "80%" }}>
       <div className="row">
-        <div className="col-md-2 d-flex greyHeadings">
+        <div className="col-md-2 d-flex greyHeadingsFirst">
           დომენები მარკეტზე: <p className="mx-2 boldHeading">703</p>
         </div>
 
@@ -30,9 +32,13 @@ function MainContent() {
       </div>
 
       <div>
-        <div class="row d-flex justify-content-between mt-4">
-          <div class="col-6 col-md-3">searck</div>
-          <div class="col-md-8">Content</div>
+        <div className="row d-flex justify-content-between mt-4">
+          <div className="col-6 col-md-4">
+            <Filters/>
+          </div>
+          <div className="col-md-7">
+            <Content/>
+          </div>
         </div>
       </div>
     </div>
