@@ -14,6 +14,8 @@ import person from "./images/person.svg";
 import lariIcon from './images/lariIcon.png'
 import greenLines from './images/greenLines.png'
 import greenCard from './images/greenCard.png'
+import cardWhite from './images/cardWhite.svg'
+
 
 
 
@@ -33,5 +35,6 @@ export {
   person,
   lariIcon,
   greenLines,
-  greenCard
+  greenCard,
+  cardWhite
 };

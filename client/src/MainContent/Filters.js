@@ -132,6 +132,10 @@ function Filters() {
           <div className="mt-3 mb-3"></div>
         </div>
 
+        <form className="multi-range-field my-5 pb-5">
+  <input id="multi24" className="multi-range" type="range" />
+</form>
+
         <p className="filterNames mt-3">კატეგორიები</p>
         {categories}
 

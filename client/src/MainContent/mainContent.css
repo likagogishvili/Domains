@@ -30,7 +30,8 @@
 
 /* FilterSide */
 
-.filterConteiner {
+.filterConteiner,
+.contentConteiner {
   background: #ffffff 0% 0% no-repeat padding-box;
   border: 1px solid #f1f1f5;
   border-radius: 15px;
@@ -62,14 +63,28 @@
   border-color: #99cc66 !important;
 }
 
-.lariP{
+.lariP {
   font: normal normal bold 16px/22px TKT;
   letter-spacing: 0px;
   color: #171725;
 }
 
-.dolariP{
+.dolariP {
   font: normal normal normal 12px/22px TKT;
   letter-spacing: 0px;
   color: #696974;
+}
+
+.contentConteiner :last-child {
+  border: none !important;
+}
+.addToCart{
+
+  background-color: #99cc66;
+  width: 25%;
+  height: 70%;
+  border-radius: 10px;
+
+
+  
 }
