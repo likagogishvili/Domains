@@ -5,11 +5,35 @@
   margin: auto;
   border-radius: 15px;
   box-shadow: inset 100px 100px 100px 100px #0000004d;
-  background-size:cover;
+  background-size: cover;
 }
 .coverContainer > p {
   text-align: left;
   font: normal normal bold 36px/37px TKT;
   letter-spacing: 0px;
   color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+  .coverContainer {
+    width: 100%;
+    border-radius: 0px 6px 6px 0px !important;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    border: 0px !important;
+    background-color: #ffffff;
+    border-left: none;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .coverContainer > p {
+    text-align: center;
+    font: normal normal bold 20px/28px TKT;
+    letter-spacing: 0px;
+    color: #ffffff;
+    opacity: 1;
+    width: 60%;
+  }
 }

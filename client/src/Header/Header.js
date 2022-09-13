@@ -1,6 +1,8 @@
 import "./header.css";
 import * as images from "../assets/Images";
+import { useSelector } from "react-redux";
 function Header() {
+  const carItems = useSelector((state) => state.card);
   return (
     <header>
       <div className="headerFirstContainer">
@@ -16,6 +18,11 @@ function Header() {
               <img src={images.bell} alt="" width={"45%"} />
             </div>
             <div className="iconBoxes d-flex align-items-center justify-content-center">
+              {carItems.length ? (
+                <div className="redCircle">{carItems.length}</div>
+              ) : (
+                ""
+              )}
               <img src={images.cardGrey} alt="" width={"55%"} />
             </div>
             <div className="iconBoxes2 d-flex">
@@ -27,10 +34,10 @@ function Header() {
               </div>
               <p className="userName pt-3">Kancha Co.</p>
               <div
-                className="iconBoxes d-flex align-items-center justify-content-center"
+                className="iconBoxes d-flex align-items-center justify-content-center "
                 style={{ border: "none" }}
               >
-                <img src={images.arrowDown} alt="" width={"25%"} />
+                <img src={images.arrowDown1} alt="" width={"20%"} className="hiddenElement" />
               </div>
             </div>
 
@@ -40,7 +47,7 @@ function Header() {
           </div>
         </div>
       </div>
-      <div className="headerSecondContaner">
+      <div className="headerSecondContaner hiddenElement">
         <div className="headerFChilds m-auto d-flex  justify-content-between">
           <div
             className="headerFChilds d-flex gap-4 align-items-center"

@@ -1,16 +1,52 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./mainContent.css";
 import * as images from "../assets/Images";
 import data from "./domainsData/domainList_.json";
+import { useDispatch} from "react-redux";
+import { counterActions } from "../store/index";
 
 function Filters() {
   const [filterWithName, setFilterWithName] = useState("");
-  const [priceFrom, setPriceFrom] = useState();
-  const [priceTo, setPriceTo] = useState();
-  const [minSimbol, setMinSimbol] = useState();
-  const [maxSymbol, setMaxSymbol] = useState();
+  const [priceFrom, setPriceFrom] = useState("");
+  const [priceTo, setPriceTo] = useState("");
+  const [minSimbol, setMinSimbol] = useState("");
+  const [maxSymbol, setMaxSymbol] = useState("");
   const [checked, setChecked] = useState([]);
   const [checkedDomains, setCheckedDomains] = useState([]);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(
+      counterActions.addSearchByName(filterWithName)
+    );
+  }, [filterWithName, dispatch]);
+
+  useEffect(() => {
+    dispatch(
+      counterActions.priceRangeSetter({
+        priceFrom: priceFrom,
+        priceTo: priceTo,
+      })
+    );
+  }, [priceFrom, priceTo, dispatch]);
+
+  useEffect(() => {
+    dispatch(
+      counterActions.symbolRangeSetter({
+        minSimbol: minSimbol,
+        maxSymbol: maxSymbol,
+      })
+    );
+  }, [minSimbol, maxSymbol, dispatch]);
+
+  useEffect(() => {
+    dispatch(counterActions.categoriesSetter(checked));
+  }, [checked, dispatch]);
+
+  useEffect(() => {
+    dispatch(counterActions.domainZoneSetter(checkedDomains));
+  }, [checkedDomains, dispatch]);
 
   //categories
   function getChecked(e) {
@@ -29,11 +65,13 @@ function Filters() {
       <div key={item.id}>
         <input
           type="checkbox"
-          id={item.name}
+          id={item.id}
           className="form-check-input mb-2"
           onChange={getChecked}
         />
-        <label htmlFor={item.id} className='mx-2'>{item.name}</label>
+        <label htmlFor={item.id} className="mx-2">
+          {item.name}
+        </label>
       </div>
     );
   });
@@ -62,7 +100,9 @@ function Filters() {
           className="form-check-input mb-2"
           onChange={getDomains}
         />
-        <label htmlFor={domain} className="mx-2">{domain}</label>
+        <label htmlFor={domain} className="mx-2">
+          {domain}
+        </label>
       </div>
     );
   });
@@ -74,11 +114,11 @@ function Filters() {
           type="search"
           value={filterWithName}
           id="form1"
-          className="filterConterSearch mt-4 px-3 m-auto"
+          className="filterConterSearch mt-4 px-4 m-auto"
           placeholder="სახელით ძებნა"
           onChange={(e) => setFilterWithName(e.target.value)}
         />
-        <p className="filterNames mt-3" >ფასი</p>
+        <p className="filterNames mt-3">ფასი</p>
 
         <div className="row">
           <input
@@ -133,15 +173,14 @@ function Filters() {
         </div>
 
         <form className="multi-range-field my-5 pb-5">
-  <input id="multi24" className="multi-range" type="range" />
-</form>
+          <input id="multi24" className="multi-range" type="range" />
+        </form>
 
         <p className="filterNames mt-3">კატეგორიები</p>
         {categories}
 
         <p className="filterNames mt-3">დომენის ზონა</p>
         {domainZone}
-
       </div>
     </div>
   );
