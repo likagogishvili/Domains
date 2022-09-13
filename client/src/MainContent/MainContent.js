@@ -1,9 +1,9 @@
-import "./mainContent.css";
+import "./styles/mainContent.css";
 import * as images from "../assets/Images";
-import Filters from "./Filters";
-import Content from "./Content";
+import Filters from "./components/Filters";
+import Content from "./components/Content";
 import { useEffect, useState } from "react";
-import FilterPopUp from "./FilterPopUp";
+import FilterPopUp from "./components/FilterPopUp";
 
 function MainContent() {
   const [windowSize, setWindowSize] = useState(getWindowSize());
@@ -22,7 +22,7 @@ function MainContent() {
   }, []);
 
   return (
-    <div className=" m-auto contentItems" >
+    <div className=" m-auto contentItems">
       <div className="sorting-ctn row hiddenElement">
         <div className="col-md-2 d-flex greyHeadingsFirst">
           დომენები მარკეტზე: <p className="mx-2 boldHeading">703</p>

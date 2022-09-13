@@ -2,8 +2,14 @@ import { createSlice, configureStore } from "@reduxjs/toolkit";
 const initialState = {
   card: [],
   searchByName: "",
-  priceRange: {},
-  symbolRange: {},
+  priceRange: {
+    priceFrom: "",
+    priceTo: "",
+  },
+  symbolRange: {
+    minSimbol: "",
+    maxSymbol: "",
+  },
   categories: [],
   domainZone: [],
 };

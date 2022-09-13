@@ -21,7 +21,6 @@
   background-size: 30px;
   margin: -5px 20px 0 25px;
   display: none;
-
 }
 
 .icons-cnt {
@@ -36,7 +35,7 @@
   border-radius: 12px;
   opacity: 1;
   width: 48px;
-  display: flex; 
+  display: flex;
 }
 .iconBoxes2 {
   background: #ffffff;
@@ -113,63 +112,62 @@
   --bs-gutter-x: 0rem !important;
 }
 
+.cart-icon-cnt {
+  position: relative;
+}
+
 .redCircle {
   position: absolute;
-  top: 10px;
-  left: 76%;
-  width: 22px;
-  height: 22px;
+  top: -3px;
+  right: -3px;
+  width: 18px;
   background: #ff4d4d 0% 0% no-repeat padding-box;
   border-radius: 11px;
   text-align: center;
   font: normal normal medium 11px/14px Helvetica Neue LT GEO;
   letter-spacing: 0px;
-  font-size: 0.89rem;
+  font-size: 0.8rem;
   color: #ffffff;
 }
 
-
 @media only screen and (max-width: 768px) {
-
-.headerFChilds {
-  width: 100%;
- } 
- .burger-icon {
-  display: block;
- }
-  .userName{
-  display: none;
+  .headerFChilds {
+    width: 100%;
+  }
+  .burger-icon {
+    display: block;
+  }
+  .userName {
+    display: none;
   }
 
   .nav-icon {
-  border: none;
+    border: none;
   }
 
   .dropdown-icon {
-  display: none;
+    display: none;
   }
   .flag-icon {
-  display: none;
+    display: none;
   }
   .iconBoxes2 {
-  border: none;
+    border: none;
   }
 
   .icons-cnt {
-  gap: 7px;
+    gap: 7px;
   }
 
   .headerSecondContaner {
     display: none;
   }
-
-
 }
 
 @media only screen and (max-width: 476px) {
   .burger-icon {
     background-size: 25px;
-   }
+  }
 
   .icons-cnt {
     gap: 0;
@@ -182,5 +180,4 @@
   .logo {
     width: 150px;
   }
-  
 }

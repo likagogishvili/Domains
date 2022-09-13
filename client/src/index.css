@@ -7,7 +7,7 @@
 html {
   font-family: 'Noto Sans JP', sans-serif;
   scroll-behavior: smooth;
-  cursor: url('./assets/cursor.cur'), auto !important;
+  cursor: url('./assets/cursors/cursor.cur'), auto !important;
 }
 
 body {
@@ -16,11 +16,11 @@ body {
 }
 
 html, input, label {
-  cursor: url('./assets/cursor.cur'), auto !important;
+  cursor: url('./assets/cursors/cursor.cur'), auto !important;
 }
 
 button, a {
-  cursor: url('./assets/pointer.cur'), auto !important;
+  cursor: url('./assets/cursors/pointer.cur'), auto !important;
 }
 
 

@@ -19,7 +19,6 @@ import cardWhite from "./images/cardWhite.svg";
 import btn_send_green from "./images/Btn_send_green.svg";
 import sortImg from "./images/sort.png";
 
-
 export {
   accept,
   arrowDown,
@@ -40,5 +39,5 @@ export {
   cardWhite,
   arrowDown1,
   btn_send_green,
-  sortImg
+  sortImg,
 };

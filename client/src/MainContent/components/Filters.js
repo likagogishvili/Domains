@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
-import "./mainContent.css";
-import * as images from "../assets/Images";
-import data from "./domainsData/domainList_.json";
-import { useDispatch} from "react-redux";
-import { counterActions } from "../store/index";
+import "../styles/mainContent.css";
+
+import * as images from "../../assets/Images";
+import data from "../domainsData/domainList_.json";
+import { useDispatch, useSelector } from "react-redux";
+import { counterActions } from "../../store/index";
+import SliderPrice from "./sliders/SliderPrice";
+import SliderSymbol from "./sliders/SliderSymbol";
 
 function Filters() {
   const [filterWithName, setFilterWithName] = useState("");
@@ -14,12 +17,12 @@ function Filters() {
   const [checked, setChecked] = useState([]);
   const [checkedDomains, setCheckedDomains] = useState([]);
 
-  const dispatch = useDispatch();
+  const priceRange = useSelector((state) => state.priceRange);
+  const symbolRange = useSelector((state) => state.symbolRange);
 
+  const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(
-      counterActions.addSearchByName(filterWithName)
-    );
+    dispatch(counterActions.addSearchByName(filterWithName));
   }, [filterWithName, dispatch]);
 
   useEffect(() => {
@@ -50,7 +53,7 @@ function Filters() {
 
   //categories
   function getChecked(e) {
-    var array = [...checked]; // make a separate copy of the array
+    var array = [...checked];
     if (!checked.includes(e.target.id)) {
       setChecked((current) => [...current, e.target.id]);
     } else {
@@ -78,7 +81,7 @@ function Filters() {
 
   //Domains
   function getDomains(e) {
-    var array = [...checkedDomains]; // make a separate copy of the array
+    var array = [...checkedDomains];
     if (!checkedDomains.includes(e.target.id)) {
       setCheckedDomains((current) => [...current, e.target.id]);
     } else {
@@ -119,11 +122,10 @@ function Filters() {
           onChange={(e) => setFilterWithName(e.target.value)}
         />
         <p className="filterNames mt-3">ფასი</p>
-
         <div className="row">
           <input
             type="number"
-            value={priceFrom}
+            value={priceRange.priceFrom}
             id="form1"
             className="filterConterSearch m-auto col-5 px-2"
             style={{
@@ -134,7 +136,7 @@ function Filters() {
           />
           <input
             type="number"
-            value={priceTo}
+            value={priceRange.priceTo}
             id="form1"
             className="filterConterSearch m-auto col-5 px-2"
             style={{
@@ -146,12 +148,14 @@ function Filters() {
           <div className="mt-3 mb-3"></div>
         </div>
 
+        <SliderPrice />
+
         <p className="filterNames mt-3">სიმბოლოების რაოდენობა</p>
 
         <div className="row ">
           <input
             type="number"
-            value={minSimbol}
+            value={symbolRange.minSimbol}
             id="form1"
             className="filterConterSearch m-auto col-5 px-2"
             style={{
@@ -161,7 +165,7 @@ function Filters() {
           />
           <input
             type="number"
-            value={maxSymbol}
+            value={symbolRange.maxSymbol}
             id="form1"
             className="filterConterSearch m-auto col-5 px-2"
             style={{
@@ -172,9 +176,7 @@ function Filters() {
           <div className="mt-3 mb-3"></div>
         </div>
 
-        <form className="multi-range-field my-5 pb-5">
-          <input id="multi24" className="multi-range" type="range" />
-        </form>
+        <SliderSymbol />
 
         <p className="filterNames mt-3">კატეგორიები</p>
         {categories}

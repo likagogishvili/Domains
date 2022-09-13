@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import * as images from "../assets/Images";
-import data from "./domainsData/domainList_.json";
+import * as images from "../../assets/Images";
+import data from "../domainsData/domainList_.json";
 import { useDispatch } from "react-redux";
-import { counterActions } from "../store/index";
+import { counterActions } from "../../store/index";
 import { useSelector } from "react-redux";
 
 function Content() {
@@ -177,7 +177,13 @@ function Content() {
               onClick={AddItemInCard}
             >
               {domainSelected === domain.domainName && (
-                <p className="pt-1 text-white mx-1 mt-1">დამატება</p>
+                <p
+                  className="pt-1 text-white mx-1 mt-1"
+                  id={domain.domainName}
+                  onMouseOver={ClickedItem}
+                >
+                  დამატება
+                </p>
               )}
               <img
                 src={images.cardWhite}

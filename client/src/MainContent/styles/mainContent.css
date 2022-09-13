@@ -130,7 +130,6 @@
   font: normal normal bold 16px/23px TKT;
   letter-spacing: 0px;
   color: #696974;
-
 }
 
 .popUp > button {
@@ -147,20 +146,18 @@
   justify-content: center;
   padding-right: 10%;
 }
-.contentItems{
+.contentItems {
   width: 80%;
 }
 @media only screen and (max-width: 768px) {
-  .contentItems{
+  .contentItems {
     width: 90%;
-    
   }
-  .maxWidth{
+  .maxWidth {
     width: 100% !important;
   }
 
   .sorting-ctn {
     display: none !important;
   }
-
 }

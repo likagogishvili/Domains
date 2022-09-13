@@ -7,22 +7,24 @@ function Header() {
     <header>
       <div className="headerFirstContainer">
         <div className="headerFChilds m-auto d-flex align-items-center">
-            <i className="burger-icon"></i>
-            <img className= "logo" alt="" src={images.logoText} />
+          <i className="burger-icon"></i>
+          <img className="logo" alt="" src={images.logoText} />
           <div className="icons-cnt d-flex justify-content-between ml-auto">
-              <i className="nav-icon bell-icon" ></i>
+            <i className="nav-icon bell-icon"></i>
+            <div className="cart-icon-cnt">
               {carItems.length ? (
-                <div className="redCircle">{carItems.length}</div>
+                <span className="redCircle">{carItems.length}</span>
               ) : (
                 ""
               )}
               <i className="nav-icon cart-icon"> </i>
-            <div className="iconBoxes2 d-flex ">
-                <i className="person-icon"></i>
-              <p className="userName">Kancha Co.</p>
-                <i className='dropdown-icon'></i>
             </div>
-              <i className="nav-icon flag-icon"></i>
+            <div className="iconBoxes2 d-flex ">
+              <i className="person-icon"></i>
+              <p className="userName">Kancha Co.</p>
+              <i className="dropdown-icon"></i>
+            </div>
+            <i className="nav-icon flag-icon"></i>
           </div>
         </div>
       </div>
