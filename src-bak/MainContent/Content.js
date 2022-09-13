@@ -15,6 +15,8 @@ function Content() {
     Number(i)
   );
   const domainZone = useSelector((state) => state.domainZone);
+
+  console.log(domainZone);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(counterActions.addInCard(addedItem));

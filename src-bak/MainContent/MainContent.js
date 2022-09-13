@@ -23,7 +23,7 @@ function MainContent() {
 
   return (
     <div className=" m-auto contentItems" >
-      <div className="sorting-ctn row hiddenElement">
+      <div className="row hiddenElement">
         <div className="col-md-2 d-flex greyHeadingsFirst">
           დომენები მარკეტზე: <p className="mx-2 boldHeading">703</p>
         </div>

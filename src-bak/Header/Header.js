@@ -6,23 +6,44 @@ function Header() {
   return (
     <header>
       <div className="headerFirstContainer">
-        <div className="headerFChilds m-auto d-flex align-items-center">
-            <i className="burger-icon"></i>
-            <img className= "logo" alt="" src={images.logoText} />
-          <div className="icons-cnt d-flex justify-content-between ml-auto">
-              <i className="nav-icon bell-icon" ></i>
+        <div className="headerFChilds m-auto d-flex align-items-center justify-content-between">
+          <div>
+            <img alt="" src={images.logoText} />
+          </div>
+          <div
+            className="d-flex justify-content-between"
+            style={{ width: "24%" }}
+          >
+            <div className="iconBoxes align-items-center justify-content-center">
+              <img src={images.bell} alt="" width={"45%"} />
+            </div>
+            <div className="iconBoxes align-items-center justify-content-center">
               {carItems.length ? (
                 <div className="redCircle">{carItems.length}</div>
               ) : (
                 ""
               )}
-              <i className="nav-icon cart-icon"> </i>
-            <div className="iconBoxes2 d-flex ">
-                <i className="person-icon"></i>
-              <p className="userName">Kancha Co.</p>
-                <i className='dropdown-icon'></i>
+              <img src={images.cardGrey} alt="" width={"55%"} />
             </div>
-              <i className="nav-icon flag-icon"></i>
+            <div className="iconBoxes2 d-flex">
+              <div
+                className="iconBoxes align-items-center justify-content-center "
+                style={{ border: "none" }}
+              >
+                <img src={images.person} alt="" width={"45%"} className="imagePerson"  />
+              </div>
+              <p className="userName pt-3 ">Kancha Co.</p>
+              <div
+                className="iconBoxes  align-items-center justify-content-center hiddenElement"
+                style={{ border: "none" }}
+              >
+                <img src={images.arrowDown1} alt="" width={"20%"} className="hiddenElement" />
+              </div>
+            </div>
+
+            <div className="iconBoxes align-items-center justify-content-center hiddenElement">
+              <img src={images.flagGeo} alt="" width={"50%"} />
+            </div>
           </div>
         </div>
       </div>

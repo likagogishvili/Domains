@@ -6,6 +6,8 @@
 
 html {
   font-family: 'Noto Sans JP', sans-serif;
+  scroll-behavior: smooth;
+  cursor: url('./assets/cursor.cur'), auto !important;
 }
 
 body {
@@ -13,3 +15,28 @@ body {
   background: #FAFAFB;
 }
 
+html, input, label {
+  cursor: url('./assets/cursor.cur'), auto !important;
+}
+
+button, a {
+  cursor: url('./assets/pointer.cur'), auto !important;
+}
+
+
+::selection {
+  background-color: rgb(131, 218, 0);
+  color: rgb(43, 9, 43);
+}
+
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(99, 99, 99, 0.4);
+  border-radius: 9px;
+}

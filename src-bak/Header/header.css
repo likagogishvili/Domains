@@ -1,0 +1,87 @@
+.headerFirstContainer {
+  height: 80px;
+  box-shadow: 0px 3px 6px #00000005;
+}
+.headerSecondContaner {
+  height: 60px;
+  display: flex;
+  box-shadow: 0px 3px 6px #00000005;
+  border-top: 1px solid #f1f1f5;
+}
+.headerFChilds {
+  width: 80%;
+  height: 100%;
+}
+
+.iconBoxes {
+  background: #ffffff;
+  border: 1px solid #f1f1f5;
+  border-radius: 12px;
+  opacity: 1;
+  width: 48px;
+  display: flex; 
+}
+.iconBoxes2 {
+  background: #ffffff;
+  border: 1px solid #f1f1f5;
+  border-radius: 12px;
+  opacity: 1;
+  width: 40%;
+}
+
+.userName {
+  text-align: left;
+  font: normal normal normal 14px/20px TKT;
+  letter-spacing: 0px;
+  width: 50%;
+  color: #696974;
+  opacity: 1;
+}
+.headerFChilds > a {
+  font: normal normal medium 14px/40px TKT;
+  letter-spacing: 0px;
+  color: #696974;
+  opacity: 1;
+  text-decoration: none;
+}
+.row {
+  --bs-gutter-x: 0rem !important;
+}
+
+.redCircle {
+  position: absolute;
+  top: 10px;
+  left: 76%;
+  width: 22px;
+  height: 22px;
+  background: #ff4d4d 0% 0% no-repeat padding-box;
+  border-radius: 11px;
+  text-align: center;
+  font: normal normal medium 11px/14px Helvetica Neue LT GEO;
+  letter-spacing: 0px;
+  font-size: 0.89rem;
+  color: #ffffff;
+}
+
+
+@media only screen and (max-width: 768px) {
+.userName{
+  display: none;
+}
+
+.hiddenElement{
+  display: none !important;
+}
+.maxWidth{
+  width: 100% !important;
+}
+
+.iconBoxes2 {
+  width: 30%;
+}
+
+.imagePerson{
+  width: 60%;
+  
+}
+}
